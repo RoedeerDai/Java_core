@@ -1,0 +1,38 @@
+package com.roedeer.netty.nio.traditional;
+
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.net.Socket;
+
+/**
+ * Created by U6071369 on 7/26/2018.
+ */
+public class TraditionalClient {
+    public static void main(String[] args) throws Exception {
+        long start = System.currentTimeMillis();
+
+        Socket socket = new Socket("localhost",2000);
+        System.out.println("Connected with server:" + socket.getInetAddress() + ":" + socket.getPort());
+
+        // 读取文件
+        FileInputStream inputStream = new FileInputStream("C:/sss.txt");
+        // 输出文件
+        DataOutputStream output = new DataOutputStream(socket.getOutputStream());
+        // 缓冲区4096K
+        byte[] b = new byte[4096];
+        // 传输长度
+        long read = 0, total = 0;
+        // 读取文件，写到socketio中
+        while ((read = inputStream.read(b)) >= 0) {
+            total = total + read;
+            output.write(b);
+        }
+        // 关闭
+        output.close();
+        socket.close();
+        inputStream.close();
+        // 打印时间
+        System.out.println("bytes send--" + total + " and totaltime--"
+                + (System.currentTimeMillis() - start));
+    }
+}
