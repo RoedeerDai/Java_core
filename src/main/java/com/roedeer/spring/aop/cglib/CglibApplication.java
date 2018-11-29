@@ -1,6 +1,6 @@
 package com.roedeer.spring.aop.cglib;
 
-import com.roedeer.aop.dynamicProxy.demo1.IDBQuery;
+import com.roedeer.spring.aop.dynamicProxy.demo1.IDBQuery;
 
 /**
  * Created by Roedeer on 11/24/2018.

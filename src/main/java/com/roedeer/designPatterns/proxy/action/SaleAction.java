@@ -1,8 +1,8 @@
 package com.roedeer.designPatterns.proxy.action;
 
 
-import com.roedeer.proxy.service.IBoss;
-import com.roedeer.proxy.service.impl.Boss;
+import com.roedeer.designPatterns.proxy.service.IBoss;
+import com.roedeer.designPatterns.proxy.service.impl.Boss;
 import org.junit.Test;
 
 public class SaleAction {
@@ -12,7 +12,7 @@ public class SaleAction {
 	 */
 	@Test
 	public void saleByBossSelf() throws Exception {
-		IBoss boss = new Boss();
+		IBoss boss = (IBoss) new Boss();
 		System.out.println("老板自营！");
 		int money = boss.yifu("xxl");// 老板自己卖衣服，不需要客服，结果就是没有聊天记录
 		System.out.println("衣服成交价：" + money);

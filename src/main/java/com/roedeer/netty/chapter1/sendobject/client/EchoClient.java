@@ -1,6 +1,6 @@
 package com.roedeer.netty.chapter1.sendobject.client;
 
-import com.roedeer.netty.sendobject.coder.PersonEncoder;
+import com.roedeer.netty.chapter1.sendobject.coder.PersonEncoder;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;

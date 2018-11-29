@@ -1,7 +1,7 @@
 package com.roedeer.netty.chapter1.sendobject.coder;
 
-import com.roedeer.netty.sendobject.utils.ByteBufToBytes;
-import com.roedeer.netty.sendobject.utils.ByteObjConverter;
+import com.roedeer.netty.chapter1.sendobject.utils.ByteBufToBytes;
+import com.roedeer.netty.chapter1.sendobject.utils.ByteObjConverter;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;

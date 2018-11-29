@@ -1,9 +1,10 @@
 package com.roedeer.designPatterns.proxy.action;
 
 
-import com.roedeer.proxy.proxyclass.ProxyBoss;
-import com.roedeer.proxy.service.IBoss;
-import com.roedeer.proxy.service.impl.Boss;
+import com.roedeer.designPatterns.proxy.proxyclass.ProxyBoss;
+import com.roedeer.designPatterns.proxy.service.IBoss;
+import com.roedeer.designPatterns.proxy.service.impl.Boss;
+
 import org.junit.Test;
 
 /**
@@ -17,7 +18,7 @@ public class ProxySaleAction {
 	 */
 	@Test
 	public void saleByProxy() throws Exception {
-		IBoss boss = ProxyBoss.getProxy(10,IBoss.class,Boss.class);// 将代理的方法实例化成接口
+		IBoss boss = ProxyBoss.getProxy(10,IBoss.class, Boss.class);// 将代理的方法实例化成接口
 		//IBoss boss = new Boss();// 将代理的方法实例化成接口
 		System.out.println("代理经营！");
 		int money = boss.yifu("xxl");// 调用接口的方法，实际上调用方式没有变

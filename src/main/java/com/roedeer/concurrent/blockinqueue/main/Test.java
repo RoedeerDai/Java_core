@@ -2,8 +2,8 @@ package com.roedeer.concurrent.blockinqueue.main;
 
 
 
-import com.roedeer.blockinqueue.consumer.Consumer;
-import com.roedeer.blockinqueue.producer.Producer;
+import com.roedeer.concurrent.blockinqueue.consumer.Consumer;
+import com.roedeer.concurrent.blockinqueue.producer.Producer;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;

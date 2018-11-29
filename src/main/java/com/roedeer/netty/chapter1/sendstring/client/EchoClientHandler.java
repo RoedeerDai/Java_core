@@ -17,7 +17,6 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 	}
 
 	// • 从服务器接收到数据后调用
-	@Override
 	protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg)
 			throws Exception {
 		System.out.println("client 读取server数据..");
@@ -36,5 +35,10 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 		System.out.println("client exceptionCaught..");
 		// 释放资源
 		ctx.close();
+	}
+
+	@Override
+	protected void messageReceived(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf) throws Exception {
+
 	}
 }

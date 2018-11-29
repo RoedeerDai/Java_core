@@ -22,10 +22,7 @@ public class TestBlockingQueue {
 		}
 		
 		new Thread(producer, "Producer" + (5)).start();
-	
-		
-		
-		
+
 	}
 	
 

@@ -1,6 +1,6 @@
 package com.roedeer.netty.chapter1.sendobject.server;
 
-import com.roedeer.netty.sendobject.bean.Person;
+import com.roedeer.netty.chapter1.sendobject.bean.Person;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 

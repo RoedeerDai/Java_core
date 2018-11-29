@@ -1,7 +1,7 @@
 package com.roedeer.designPatterns.proxy.service.impl;
 
 
-import com.roedeer.proxy.service.IBoss;
+import com.roedeer.designPatterns.proxy.service.IBoss;
 
 /**
  * 实现了卖衣服的接口

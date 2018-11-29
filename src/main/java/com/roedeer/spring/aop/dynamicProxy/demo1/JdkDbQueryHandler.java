@@ -15,7 +15,6 @@ public class JdkDbQueryHandler implements InvocationHandler {
     /**
      * 生成handler
      */
-    @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         if (real == null) {
             real = new DBQuery();   //如果是第一次调用,则生成真实对象

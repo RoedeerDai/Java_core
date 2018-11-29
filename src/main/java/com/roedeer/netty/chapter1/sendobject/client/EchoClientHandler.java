@@ -1,6 +1,6 @@
 package com.roedeer.netty.chapter1.sendobject.client;
 
-import com.roedeer.netty.sendobject.bean.Person;
+import com.roedeer.netty.chapter1.sendobject.bean.Person;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -18,7 +18,6 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 	}
 
 	// • 从服务器接收到数据后调用
-	@Override
 	protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg)
 			throws Exception {
 		System.out.println("client 读取server数据..");
@@ -37,5 +36,10 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 		System.out.println("client exceptionCaught..");
 		// 释放资源
 		ctx.close();
+	}
+
+	@Override
+	protected void messageReceived(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf) throws Exception {
+
 	}
 }

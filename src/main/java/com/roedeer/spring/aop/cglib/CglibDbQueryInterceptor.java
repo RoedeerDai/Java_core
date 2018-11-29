@@ -1,7 +1,7 @@
 package com.roedeer.spring.aop.cglib;
 
-import com.roedeer.aop.dynamicProxy.demo1.DBQuery;
-import com.roedeer.aop.dynamicProxy.demo1.IDBQuery;
+import com.roedeer.spring.aop.dynamicProxy.demo1.DBQuery;
+import com.roedeer.spring.aop.dynamicProxy.demo1.IDBQuery;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
