@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch3.aware;
+package com.roedeer.spring.spring4.ch3.aware;
 
 import java.io.IOException;
 
@@ -32,7 +32,7 @@ public class AwareService implements BeanNameAware,ResourceLoaderAware{//1
 				loader.getResource("classpath:config/AwareTest");
 		try{
 
-			System.out.println("ResourceLoader加载的文件内容为: " + IOUtils.toString(resource.getInputStream()));
+			System.out.println("ResourceLoader加载的文件内容为: " + IOUtils.toString(resource.getInputStream(),"UTF-8"));
 
 		}catch(IOException e){
 			e.printStackTrace();

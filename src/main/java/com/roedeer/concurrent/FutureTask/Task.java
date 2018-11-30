@@ -11,6 +11,7 @@ public class Task implements Callable<Integer> {
     public Integer call() throws Exception {
         System.out.println("子线程在进行计算");
         Thread.sleep(1000);
+        System.out.println("子线程睡醒了");
         int sum = 0;
         for (int i = 0; i < 100; i++)
             sum += i;

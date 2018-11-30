@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch3.fortest;
+package com.roedeer.spring.spring4.ch3.fortest;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;

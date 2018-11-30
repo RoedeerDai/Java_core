@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch2.el;
+package com.roedeer.spring.spring4.ch2.el;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import org.springframework.core.io.Resource;
  * Created by Roedeer on 2018/6/12.
  */
 @Configuration
-@ComponentScan("com.roedeer.spring4.ch2.el")
+@ComponentScan("com.roedeer.spring.spring4.ch2.el")
 @PropertySource("classpath:config/test.properties")
 public class ElConfig {
 
@@ -55,8 +55,8 @@ public class ElConfig {
             System.out.println(randomNumber);
             System.out.println(fromAnother);
 
-            System.out.println(IOUtils.toString(testFile.getInputStream()));
-            System.out.println(IOUtils.toString(testUrl.getInputStream()));
+            System.out.println(IOUtils.toString(testFile.getInputStream(),"UTF-8"));
+            System.out.println(IOUtils.toString(testUrl.getInputStream(),"UTF-8"));
             System.out.println(bookName);
             System.out.println(environment.getProperty("book.author"));
         } catch (Exception e) {

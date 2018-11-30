@@ -9,16 +9,17 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 	// 客户端连接服务器后被调用
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
-		 Person person = new Person();
-	        person.setName("angelababy");
-	        person.setSex("girl");
-	        person.setAge(18);
-	        ctx.write(person);
-	        ctx.flush();
+		Person person = new Person();
+		person.setName("angelababy");
+		person.setSex("girl");
+		person.setAge(18);
+		ctx.write(person);
+		ctx.flush();
 	}
 
 	// • 从服务器接收到数据后调用
-	protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg)
+	@Override
+	protected void messageReceived(ChannelHandlerContext ctx, ByteBuf msg)
 			throws Exception {
 		System.out.println("client 读取server数据..");
 		// 服务端返回消息后
@@ -38,8 +39,4 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 		ctx.close();
 	}
 
-	@Override
-	protected void messageReceived(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf) throws Exception {
-
-	}
 }

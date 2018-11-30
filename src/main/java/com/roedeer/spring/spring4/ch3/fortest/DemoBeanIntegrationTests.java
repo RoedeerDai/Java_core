@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch3.fortest;
+package com.roedeer.spring.spring4.ch3.fortest;
 
 import org.junit.Assert;
 import org.junit.Test;

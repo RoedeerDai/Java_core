@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch3.fortest;
+package com.roedeer.spring.spring4.ch3.fortest;
 
 /**
  * Created by Roedeer on 2018/6/13.

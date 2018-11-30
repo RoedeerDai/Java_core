@@ -31,7 +31,7 @@ public class MyRunnable implements Runnable
         Runnable threadJob = new MyRunnable();
         Thread myThread = new Thread(threadJob);
         myThread.start();
-        System.out.println("back in main");
+        System.out.println("back in demo");
     }
 
 }
