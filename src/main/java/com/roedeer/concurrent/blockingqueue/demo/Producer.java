@@ -1,4 +1,4 @@
-package com.roedeer.concurrent.blockinqueue.producer;
+package com.roedeer.concurrent.blockingqueue.demo;
 
 import java.util.concurrent.BlockingQueue;
 

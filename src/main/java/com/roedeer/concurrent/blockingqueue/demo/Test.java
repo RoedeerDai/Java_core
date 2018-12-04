@@ -1,19 +1,18 @@
-package com.roedeer.concurrent.blockinqueue.main;
+package com.roedeer.concurrent.blockingqueue.demo;
+
+
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class TestBlockingQueue {
-	
-	public static void main(String[] args) {
-		
-
+public class Test {
+	public static void main(String[] args) throws Exception {
 		BlockingQueue<String> queue = new LinkedBlockingQueue<String>(2);
 		// BlockingQueue<String> queue = new LinkedBlockingQueue<String>();
 		// 不设置的话，LinkedBlockingQueue默认大小为Integer.MAX_VALUE
 		// BlockingQueue<String> queue = new ArrayBlockingQueue<String>(2);
-		TestBlockingQueueConsumer consumer = new TestBlockingQueueConsumer(queue);
-		TestBlockingQueueProducer producer = new TestBlockingQueueProducer(queue);
+		Consumer consumer = new Consumer(queue);
+		Producer producer = new Producer(queue);
 		for (int i = 0; i < 3; i++) {
 			new Thread(producer, "Producer" + (i + 1)).start();
 		}
@@ -22,8 +21,5 @@ public class TestBlockingQueue {
 		}
 		
 		new Thread(producer, "Producer" + (5)).start();
-
 	}
-	
-
 }

@@ -1,4 +1,4 @@
-package com.roedeer.concurrent.blockinqueue.main;
+package com.roedeer.concurrent.blockingqueue.demo;
 
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
