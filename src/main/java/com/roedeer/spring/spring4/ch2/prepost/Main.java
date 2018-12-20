@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch2.prepost;
+package com.roedeer.spring.spring4.ch2.prepost;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

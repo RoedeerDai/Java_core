@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch2.prepost;
+package com.roedeer.spring.spring4.ch2.prepost;
 
 public class BeanWayService {
 	public void init() {

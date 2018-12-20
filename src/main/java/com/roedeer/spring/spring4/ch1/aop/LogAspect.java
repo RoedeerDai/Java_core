@@ -2,7 +2,6 @@ package com.roedeer.spring.spring4.ch1.aop;
 
 import java.lang.reflect.Method;
 
-import com.roedeer.spring.spring4.ch1.aop.Action;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;

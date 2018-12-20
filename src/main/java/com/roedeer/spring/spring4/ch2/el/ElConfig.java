@@ -16,7 +16,7 @@ import org.springframework.core.io.Resource;
  */
 @Configuration
 @ComponentScan("com.roedeer.spring.spring4.ch2.el")
-@PropertySource("classpath:config/test.properties")
+@PropertySource("classpath:config/test.txt")
 public class ElConfig {
 
     @Value("I love you")
@@ -43,6 +43,9 @@ public class ElConfig {
     @Autowired
     private Environment environment; //7
 
+    @Autowired
+    private DemoService demoService;
+
     @Bean //7
     public static PropertySourcesPlaceholderConfigurer propertyConfigure() {
         return new PropertySourcesPlaceholderConfigurer();
@@ -63,5 +66,9 @@ public class ElConfig {
             e.printStackTrace();
         }
 
+    }
+
+    public void callDemoService() {
+        demoService.print();
     }
 }

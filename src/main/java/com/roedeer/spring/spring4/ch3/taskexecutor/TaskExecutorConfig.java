@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch3.taskexecutor;
+package com.roedeer.spring.spring4.ch3.taskexecutor;
 
 import java.util.concurrent.Executor;
 
@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.AsyncConfigurer;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 @Configuration
-@ComponentScan("com.roedeer.spring4.ch3.taskexecutor")
+@ComponentScan("com.roedeer.spring.spring4.ch3.taskexecutor")
 @EnableAsync //开启异步支持
 public class TaskExecutorConfig implements AsyncConfigurer{//2
 

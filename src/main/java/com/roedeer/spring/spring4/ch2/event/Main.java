@@ -1,5 +1,6 @@
-package com.roedeer.spring4.ch2.event;
+package com.roedeer.spring.spring4.ch2.event;
 
+import com.roedeer.spring.spring4.ch2.event.EventConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

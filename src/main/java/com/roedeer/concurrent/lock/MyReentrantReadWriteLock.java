@@ -1,4 +1,4 @@
-package com.roedeer.concurrent.thread.lock;
+package com.roedeer.concurrent.lock;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -11,6 +11,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  *
  */
 public class MyReentrantReadWriteLock {
+
 	 private ReentrantReadWriteLock rwl = new ReentrantReadWriteLock();
      
 	    public static void main(String[] args)  {

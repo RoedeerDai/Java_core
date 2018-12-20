@@ -4,8 +4,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Main {
 	public static void main(String[] args) {
-		 AnnotationConfigApplicationContext context =
-	                new AnnotationConfigApplicationContext(AopConfig.class); //1
+		 AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AopConfig.class); //1
 		 
 		 DemoAnnotationService demoAnnotationService = context.getBean(DemoAnnotationService.class);
 		 

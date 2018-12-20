@@ -11,6 +11,8 @@ public class Main {
 		 ElConfig resourceService = context.getBean(ElConfig.class);
 		 
 		 resourceService.outputResource();
+
+		 resourceService.callDemoService();
 		 
 		 context.close();
 	}

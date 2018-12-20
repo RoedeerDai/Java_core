@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch3.annotation;
+package com.roedeer.spring.spring4.ch3.annotation;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

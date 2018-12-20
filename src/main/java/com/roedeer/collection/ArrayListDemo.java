@@ -9,7 +9,11 @@ import java.util.List;
  */
 public class ArrayListDemo {
     public static void main(String[] args) {
-        ArrayList list = new ArrayList();
-        LinkedList linkedList = new LinkedList();
+        for (int i = 0; i < 10; i++) {
+            if (i == 5) {
+                break;
+            }
+            System.out.println(i);
+        }
     }
 }

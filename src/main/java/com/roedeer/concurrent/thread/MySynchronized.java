@@ -1,4 +1,4 @@
-package com.roedeer.concurrent.thread.testThread;
+package com.roedeer.concurrent.thread;
 
 
 /**

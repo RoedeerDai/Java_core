@@ -1,0 +1,2 @@
+book.name=java
+book.author=roedeer

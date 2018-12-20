@@ -1,4 +1,4 @@
-package com.roedeer.concurrent.thread.lock;
+package com.roedeer.concurrent.lock;
 
 
 /**

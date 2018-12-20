@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch3.annotation;
+package com.roedeer.spring.spring4.ch3.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

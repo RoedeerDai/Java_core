@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch3.taskscheduler;
+package com.roedeer.spring.spring4.ch3.taskscheduler;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

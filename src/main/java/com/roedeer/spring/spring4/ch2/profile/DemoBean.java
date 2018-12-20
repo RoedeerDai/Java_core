@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch2.profile;
+package com.roedeer.spring.spring4.ch2.profile;
 
 
 public class DemoBean {

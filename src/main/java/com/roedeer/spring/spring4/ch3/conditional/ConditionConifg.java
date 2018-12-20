@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch3.conditional;
+package com.roedeer.spring.spring4.ch3.conditional;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;

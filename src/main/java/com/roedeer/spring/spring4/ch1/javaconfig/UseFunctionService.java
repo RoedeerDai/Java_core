@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch1.javaconfig;
+package com.roedeer.spring.spring4.ch1.javaconfig;
 
 
 import org.springframework.stereotype.Service;

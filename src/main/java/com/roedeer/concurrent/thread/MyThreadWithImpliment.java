@@ -1,4 +1,4 @@
-package com.roedeer.concurrent.thread.testThread;
+package com.roedeer.concurrent.thread;
 /**
  * Created by U6071369 on 7/17/2018.
  */

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--scope = "singleton"(默认就是单例模式)-->
+    <bean id="a" class="com.roedeer.spring.circleDependence.StudentA" scope="singleton">
+        <property name="studentB" ref="b" />
+    </bean>
+    <bean id="b" class="com.roedeer.spring.circleDependence.StudentB" scope="singleton">
+        <property name="studentC" ref="c" />
+    </bean>
+    <bean id="c" class="com.roedeer.spring.circleDependence.StudentC" scope="singleton">
+        <property name="studentA" ref="a" />
+    </bean>
+</beans>

@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch3.taskexecutor;
+package com.roedeer.spring.spring4.ch3.taskexecutor;
 
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;

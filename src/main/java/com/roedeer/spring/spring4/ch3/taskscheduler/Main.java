@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch3.taskscheduler;
+package com.roedeer.spring.spring4.ch3.taskscheduler;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

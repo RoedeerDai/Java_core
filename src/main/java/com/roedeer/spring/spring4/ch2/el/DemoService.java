@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch2.el;
+package com.roedeer.spring.spring4.ch2.el;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -18,4 +18,9 @@ public class DemoService {
     public void setAnother(String another) {
         this.another = another;
     }
+
+    public void print() {
+        System.out.println("Test Spring injection function !");
+    }
+
 }

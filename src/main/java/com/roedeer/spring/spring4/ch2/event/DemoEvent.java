@@ -1,4 +1,4 @@
-package com.roedeer.spring4.ch2.event;
+package com.roedeer.spring.spring4.ch2.event;
 
 import org.springframework.context.ApplicationEvent;
 
