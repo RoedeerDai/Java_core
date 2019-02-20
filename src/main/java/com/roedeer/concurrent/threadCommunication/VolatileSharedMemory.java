@@ -22,6 +22,11 @@ public class VolatileSharedMemory implements Runnable {
     public void run() {
         while (flag) {
             System.out.println(Thread.currentThread().getName() + "正在运行...");
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
         System.out.println(Thread.currentThread().getName() + "执行完毕");
     }
@@ -32,7 +37,7 @@ public class VolatileSharedMemory implements Runnable {
 
         System.out.println("Main 线程正在运行...");
 
-        TimeUnit.MILLISECONDS.sleep(1);
+        TimeUnit.MILLISECONDS.sleep(1000);
 
         volatileSharedMemory.stopThread();
 

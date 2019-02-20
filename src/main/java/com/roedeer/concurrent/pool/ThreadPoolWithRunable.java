@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
  */
 public class ThreadPoolWithRunable {
     public static void main(String[] args) {
-        ExecutorService pool = Executors.newCachedThreadPool();
+        ExecutorService pool = Executors.newFixedThreadPool(10);
         for(int i = 1; i < 5; i++){
             pool.execute(new Runnable() {
                 @Override

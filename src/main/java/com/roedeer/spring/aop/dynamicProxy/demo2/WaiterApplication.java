@@ -8,8 +8,13 @@ import java.lang.reflect.Proxy;
  */
 public class WaiterApplication {
     public static void main(String[] args) {
-        Waiter waiter = (Waiter) Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(),
-                new Class[]{Waiter.class}, new WaiterInvocationHandler(new MyWaiter()));
+        MyWaiter myWaiter = new MyWaiter();
+        WaiterInvocationHandler handler = new WaiterInvocationHandler(myWaiter);
+        Waiter waiter = (Waiter) Proxy.newProxyInstance(
+                ClassLoader.getSystemClassLoader(),//
+//                new Class[]{Waiter.class},
+                MyWaiter.class.getInterfaces(),
+                handler);
         waiter.serve();
     }
 }
