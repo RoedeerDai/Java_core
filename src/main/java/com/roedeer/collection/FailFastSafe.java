@@ -2,10 +2,9 @@ package com.roedeer.collection;
 
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @Description TODO
@@ -71,6 +70,63 @@ public class FailFastSafe {
             premiumPhone.put("Sony", "Xperia Z");
         }
 
+    }
+
+    /**
+     * subList是ArrayList的内部类
+     */
+    @Test
+    public void SubListFailFast() {
+        List masterList = new ArrayList();
+        masterList.add("one");
+        masterList.add("two");
+        masterList.add("three");
+        masterList.add("four");
+        masterList.add("five");
+
+        List branchList = masterList.subList(0, 3);
+        System.out.println("branchList = " + branchList);
+        System.out.println("masterList = " + masterList);
+
+        //下面三行会引起异常
+//        masterList.remove(0);
+//        masterList.add("ten");
+//        masterList.clear();
+
+        branchList.clear();
+        System.out.println("branchList = " + branchList);
+        System.out.println("masterList = " + masterList);
+        branchList.add("six");
+        branchList.add("seven");
+        System.out.println("branchList = " + branchList);
+        System.out.println("masterList = " + masterList);
+        branchList.remove(0);
+        System.out.println("branchList = " + branchList);
+        System.out.println("masterList = " + masterList);
+
+        for (Object t : branchList) {
+            System.out.println(t);
+        }
+
+        System.out.println(masterList);
+    }
+
+    /**
+     * CopyOnWriteArrayList COW家族 并发容器 读写分离,写操作会复制一个新集合
+     * COW适合读多写极少的情况,频繁的写性能极地,要么批量的写入,使用ArrayList作为参数填充
+     * 并发容器都是fail-safe机制,缺点无法读取到最新的数据
+     * 这也是CAP理论中C(Consistency)与A(Availability)的矛盾,一致性和可用性的矛盾
+     */
+    @Test
+    public void testCopyOnWrite() {
+        List<Long> copy = new CopyOnWriteArrayList<>();
+
+        long start = System.nanoTime();
+        for (int i = 0; i < 10 * 10000; i++) {
+            copy.add(System.nanoTime());
+        }
+        long end = System.nanoTime();
+        System.out.println("Total time = " + (end - start) / (1000.0 * 1000.0) + "ms");
     }
 
 

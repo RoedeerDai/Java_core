@@ -1,6 +1,10 @@
 package com.roedeer.practice;
 
+import org.junit.Test;
+import org.springframework.stereotype.Repository;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -36,4 +40,24 @@ public class Convert {
         }
         System.out.println(map.get("rcs_value").getPro_value());
     }
+
+    @Test
+    public void testJdk8() {
+        List<String> list = new ArrayList<>();
+        list.add("Hello");
+        list.add("Avro");
+        list.add("rpc");
+        list.add("java");
+        list.forEach(o -> {System.out.println(o);});
+    }
+
+    @Test
+    public void testObject() {
+        String[] args = {"a", "b"};
+        Object obj = args;
+        ((String []) obj)[0] = "object";
+        System.out.printf(args[0]);
+        Arrays.asList(new ArrayList<>());
+    }
+
 }
