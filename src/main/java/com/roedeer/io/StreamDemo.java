@@ -32,6 +32,25 @@ public class StreamDemo {
         out.println(salary);
     }
 
+    @Test
+    public void fileWriter() throws IOException {
+        try{
+
+            String content = "A cat will append to the end of the file";
+            File file =new File("EquitiesDerivativesAndFundsQuote.Instrument.All.3.2019-12-20-0245.2019-12-20-1048.Incremental.1.of.1.xml");
+            if(!file.exists()){
+                file.createNewFile();
+            }
+            //使用true，即进行append file
+            FileWriter fileWritter = new FileWriter(file.getName(),true);
+            fileWritter.write(content);
+            fileWritter.close();
+            System.out.println("finish");
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+
 
     public static void main(String[] args) {
         String property = System.getProperty("user.dir");

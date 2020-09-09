@@ -3,10 +3,8 @@ package com.roedeer.practice;
 import org.junit.Test;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * Created by U6071369 on 11/22/2018.
@@ -58,6 +56,21 @@ public class Convert {
         ((String []) obj)[0] = "object";
         System.out.printf(args[0]);
         Arrays.asList(new ArrayList<>());
+
+        SimpleDateFormat sdfHourlyFormat = new SimpleDateFormat("yyyy-MM-dd-HHmm");
+        String hourlyDate=sdfHourlyFormat.format(new Date());
+        System.out.println(hourlyDate);
+
     }
+
+    @Test
+    public void testO() {
+        String str = "aaabbb";
+        System.out.println(str.substring(0,str.length()-1));
+    }
+
+
+
+
 
 }

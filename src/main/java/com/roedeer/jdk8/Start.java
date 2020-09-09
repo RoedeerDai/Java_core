@@ -7,12 +7,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.GenericArrayType;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.*;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -226,9 +232,30 @@ public class Start {
         System.out.println();
     }
 
+    @Test
+    public void testLamada() throws FileNotFoundException {
+//        String path = "cfg/" + "logGeneric.property";
+//        FileInputStream stream = new FileInputStream(path);
+//        System.out.println(stream);
+        boolean flag = compareSysdateWithCache("2019-07-09");
+        System.out.println(flag);
+    }
 
-    public void testLamada() {
+    public boolean compareSysdateWithCache(String startPointDate) {
+        boolean flag = false;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String sysDate = dateFormat.format(new Date());
+        try {
+            Date currentSysDate = dateFormat.parse(sysDate);
+            Date cacheDate = dateFormat.parse(startPointDate);
+            if (cacheDate.getTime() < currentSysDate.getTime()) {
+                flag = true;
+            }
+        } catch (ParseException e) {
 
+            e.printStackTrace();
+        }
+        return flag;
     }
 
 

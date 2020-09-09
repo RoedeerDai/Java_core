@@ -7,8 +7,8 @@ import com.roedeer.spring.aop.dynamicProxy.demo1.IDBQuery;
  */
 public class CglibApplication {
     public static void main(String[] args) {
-        CglibDbQueryInterceptor interceptor = new CglibDbQueryInterceptor();
-        IDBQuery query = interceptor.createCglibProxy();
-        System.out.println(query.request());
+//        CglibDbQueryInterceptor interceptor = new CglibDbQueryInterceptor();
+//        IDBQuery query = interceptor.createCglibProxy();
+//        System.out.println(query.request());
     }
 }
